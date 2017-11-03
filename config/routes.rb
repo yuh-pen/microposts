@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'favorites/index'
+
+  get 'favorites/create'
+
+  get 'favorites/destroy'
+
   get 'relationships/create'
 
   get 'relationships/destroy'
@@ -32,6 +38,7 @@ Rails.application.routes.draw do
     member do
       get :followings
       get :followers
+      get :favorites
     end
   end
   
@@ -39,4 +46,5 @@ Rails.application.routes.draw do
   
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :favorites, only: [:create, :destroy]
 end

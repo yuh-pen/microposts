@@ -1,5 +1,5 @@
 <ul class="media-list">
-  <% microposts.each do |micropost| %>
+  <% @microposts.each do |micropost| %>
   <% user = micropost.user %>
   <li class="media">
     <div class="media-left">
@@ -21,5 +21,5 @@
     </div>
   </li>
   <% end %>
-  <%= paginate microposts %>
+  <%= paginate @microposts %>
 </ul>
